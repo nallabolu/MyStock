@@ -13,8 +13,13 @@ app.set('view engine', 'handlebars');
 
 //set Handle Bar Routes
 app.get('/', function (req, res) {
-    res.render('home',{stuff:otherStuff});
+    res.render('home');
 });
+
+app.get('/about.html', function (req, res) {
+    res.render('about');
+});
+
 
 //set static folder
 app.use(express.static(path.join(__dirname,'public')));
